@@ -1,0 +1,18 @@
+#pragma once
+#include "../../ModuleManager.h"
+#include "../Module.h"
+
+class Notifications : public IModule {
+public:
+	float positionX, positionY = 0;
+	bool showToggle = true;
+	bool color = false;
+	int opacity = 150;
+
+	SettingEnum mode = this;
+	SettingEnum animation = this;
+
+
+	virtual const char* getModuleName() override;
+	Notifications();
+};
